@@ -1,6 +1,6 @@
-html,
-body {
+*{
   --grey: hsl(240, 9%, 89%);
+  --red: rgb(135, 18, 18);
 
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +15,7 @@ main {
 }
 .illustration {
   color: var(--grey);
-  background-color: rgb(135, 18, 18);
+  background-color: var(--red);
   padding-top: 1px;
   padding-bottom: 49%;
 }
@@ -38,15 +38,59 @@ section {
   text-align: center;
   padding: 0 8px;
 }
-.form_information {
+.icon{
+  color: red
 }
-.topic {
+ul{
+  margin-left: 16rem;
+  max-height: 150px;
+  width: 500px;
+  overflow: auto;
+  list-style: none;
+  flex-direction: column;
+}
+li{
+  margin: 0 auto;
+  border:1px solid var(--grey);
+  margin-bottom: 0.5rem;
+  padding: 5px;
+  border-radius: 15px;
+}
+.list, .head_white, .head_form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 form {
-  display: grid;
-  grid-template-columns: 200px;
-  gap: 0.75rem;
-
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  border-top: solid 1px var(--grey);
+  padding: 1rem;
+}
+input, button{
+  border-color: red;
+  padding: 10px;
+  border-radius: 8px;
+  width: 500px;
+  margin: 0.5rem;
+}
+input{
+  
+  border-top: solid 1px var(--grey);
+  padding: 1rem;
+}
+button{
+  color: white;
+  background-color: var(--red);
+  transition: 0.2s;
+}
+button:hover{
+  filter : brightness(0.8)
+}
+.list{
+  border-top: solid 1px var(--grey);
+  padding: 1rem;
 }

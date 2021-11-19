@@ -1,16 +1,34 @@
-var people = document.getElementById('name')
+var userName = document.getElementById('name')
 var email = document.getElementById('email')
 var type = document.getElementById('type')
 
-var list = []
+var object_list = []
 
 const Confirm = () => {
+  var ul = document.getElementById('ul')
+
   event.preventDefault()
 
-  var information = { name: people.value, email: email.value, type: type.value }
+  var information = { name: userName.value, email: email.value, type: type.value }
 
-  if (name || email || type === null)
-    alert('Preencha todos os campos para continuar')
+  if (information.name === "" || information.email === "" || information.type === ""){
+    alert('Preencha todos os campos para continuar');
+  }
 
-  list.push(information)
+  else{
+    
+    object_list.push(information);
+  
+    const li = document.createElement('li');
+  
+    const span = document.createElement('span');
+  
+    const text = document.createTextNode(`${information.name} (${information.type})`);
+  
+    ul.appendChild(li);
+    
+    span.appendChild(text);
+    
+    li.appendChild(span);
+  }
 }
